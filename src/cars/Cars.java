@@ -20,14 +20,17 @@ public abstract class Cars {
         this.gasolineConsumption = gasolineConsumption;
     }
 
+    public Cars(String body, int maxSpeed, String mark, String engine) {
+        this.body = body;
+        this.maxSpeed = maxSpeed;
+        this.mark = mark;
+        this.engine = engine;
+    }
+
     public void signal(){
         System.out.println("BIP-BIP");
     }
-    public void move(){
-        System.out.println(mark + "  is moving at maximum speed : " + maxSpeed);
-        System.out.println("Остаток хода! " + volumeOfGasoline/gasolineConsumption*100 + " km");
-
-    }
+    public abstract void move();
 
     public String getBody() {
         return body;
