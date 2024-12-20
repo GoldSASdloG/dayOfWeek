@@ -1,6 +1,6 @@
 package cars;
 
-public class Cars {
+public abstract class Cars {
     protected String body;
     protected int maxSpeed;
     protected String mark;
