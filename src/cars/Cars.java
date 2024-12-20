@@ -24,7 +24,7 @@ public class Cars {
         System.out.println("BIP-BIP");
     }
     public void move(){
-        System.out.println("the car is moving at maximum speed : " + maxSpeed);
+        System.out.println(mark + "  is moving at maximum speed : " + maxSpeed);
         System.out.println("Остаток хода! " + volumeOfGasoline/gasolineConsumption*100 + " km");
 
     }
