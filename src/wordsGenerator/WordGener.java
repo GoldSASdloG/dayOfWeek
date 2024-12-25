@@ -3,10 +3,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WordGener {
-
+    private static List<String> createWordList(int size){
+        List<String> words = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            words.add("Слово" + i);
+        }return words;
+    }
 
     public static void main(String[] args) {
-        List<String> wordsOne = createWordList(10);
+        List<String> wordsOne = createWordList(9);
         System.out.println(wordsOne);
 
         List<String> wordsTwo = createWordList(7);
@@ -27,24 +32,13 @@ public class WordGener {
 
         String[] wordList3 = {"процесс", "пункт разгрузки", "выход из положения",
                 "тип структуры", "талант", "подход", "уровень завоеванного внимания",
-                "портал", "период времени", "обзор",
-                "образец", "пункт следования"};
+                "портал", "период времени", "обзор", "образец", "пункт следования"};
 
-        int oneLength = wordList1.length;
-        int twoLength = wordList2.length;
-        int threeLength = wordList3.length;
-
-        int rand1 = (int) (Math.random() * oneLength);
-        int rand2 = (int) (Math.random() * twoLength);
-        int rand3 = (int) (Math.random() * threeLength);
+        int rand1 = (int) (Math.random() * wordList1.length);
+        int rand2 = (int) (Math.random() * wordList2.length);
+        int rand3 = (int) (Math.random() * wordList3.length);
 
         String phrase = wordList1[rand1] + " " + wordList2[rand2] + " " + wordList3[rand3];
         System.out.println("Все, что нам нужно, - это " + phrase);
-    }
-    private static List<String> createWordList(int size){
-        List<String> words = new ArrayList<>(size);
-        for (int i = 0; i < size; i++) {
-            words.add("Слово" + i);
-        }return words;
     }
 }
